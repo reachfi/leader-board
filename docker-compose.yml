@@ -19,6 +19,7 @@ services:
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgrespassword@timescale:5432/postgres
       HASURA_GRAPHQL_ACCESS_KEY: mylongsecretkey
+      HASURA_GRAPHQL_ENABLE_CONSOLE: false
     command:
       - graphql-engine
       - serve
