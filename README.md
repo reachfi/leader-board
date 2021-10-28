@@ -15,3 +15,14 @@ INFO Migrations files created                      name=init version=16348453776
     hasura migrate apply --version 1634845377643 --skip-execution --admin-secret mylongsecretkey --database-name default
 
 hasura metadata export --admin-secret mylongsecretkey 
+
+
+## QUERY Examples
+
+{
+  weekly_repos_prs_stats(where: {repo: {_eq: "fulcrum-next"}}) {
+    prs
+    week
+    repo
+  }
+}
