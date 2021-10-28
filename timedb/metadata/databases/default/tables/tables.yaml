@@ -3,6 +3,8 @@
 - "!include public_organizations.yaml"
 - "!include public_pull_requests.yaml"
 - "!include public_repos.yaml"
+- "!include public_weekly_prs_by_org_team.yaml"
 - "!include public_weekly_prs_stats.yaml"
 - "!include public_weekly_repos_prs_stats.yaml"
 - "!include public_weekly_teams_prs_stats.yaml"
+- "!include public_weekly_teams_prs_type_stats.yaml"

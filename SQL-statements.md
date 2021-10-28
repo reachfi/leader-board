@@ -76,6 +76,14 @@ CREATE VIEW weekly_teams_prs_stats AS (
  ORDER BY week DESC
 );
 
+CREATE VIEW weekly_teams_prs_type_stats AS (
+  SELECT time_bucket('1 week', merged_at) AS week, pr_type , team,
+  COUNT(*) as PRS FROM pull_requests    
+  WHERE merged_at < NOW() AND merged_at >= '1990-01-01'
+  GROUP BY team, pr_type, week
+  ORDER BY week DESC
+);
+
 
 
 

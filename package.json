@@ -7,7 +7,7 @@
   "scripts": {
     "ingest": "node dist/main.js",
     "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build"    
   },
   "devDependencies": {
     "parcel": "^2.0.0"
