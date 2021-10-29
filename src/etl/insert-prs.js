@@ -4,7 +4,6 @@ import { fetchGraphQL } from "../utils";
 function formatDate(date) {
   if (date === undefined && date === "") return undefined;
   const newDateTime = new Date(date);
-  console.log(newDateTime);
   return newDateTime;
 }
 

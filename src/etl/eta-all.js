@@ -10,8 +10,9 @@ export async function etlAll(owner, repo, team) {
   };
   try {
     console.info("retrieving records...");
+    //TODO: what if we have more than 100 records? multiple pages
     const { nodes, lastPr } = await retrievePrs(options);
-    console.info(`retrieved ${nodes.length} records`);
+    console.debug(`retrieved ${nodes.length} records`);
 
     const { insert_pull_requests } = await insertPrs(nodes, owner, repo, team);
 
@@ -19,9 +20,9 @@ export async function etlAll(owner, repo, team) {
     if (insert_pull_requests.affected_rows > 0) {
       await recordIngestion(lastPr, team, owner, repo);
     } else {
-      console.log("0 rows were affected");
+      console.debug("0 rows were affected");
     }
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 }

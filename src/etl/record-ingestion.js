@@ -18,5 +18,5 @@ export async function recordIngestion(lastPr, team, owner, repo) {
   }
 
   // do something great with this precious data
-  console.log(data);
+  return data;
 }

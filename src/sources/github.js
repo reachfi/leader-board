@@ -8,15 +8,14 @@ let octokit = new Octokit({
 export async function retrievePrs(options, nodes = []) {
   try {
     const data = await octokit.graphql(QUERY_PRS, options);
-    console.log({ data });
     const prs = data.repository.pullRequests;
-    if (prs.nodes.length < 1) return { nodes, after };
+    if (prs.nodes.length < 1) return { nodes, after: options.after };
+
     nodes = [...nodes, ...prs.nodes];
     const lastPr = prs.pageInfo.endCursor;
-    console.log(nodes.length);
     if (nodes.length === prs.totalCount) return { nodes, lastPr };
     return await retrievePrs({ ...options, after: lastPr }, nodes);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
