@@ -1,6 +1,11 @@
 NODE_MODULES
+.DS_Store
 .parcel-cache
 etl/dist
+ui/.svelte-kit
+ui/NODE_MODULES
+ui/build
+ui/package
 .yarn/*
 !.yarn/cache
 !.yarn/patches
