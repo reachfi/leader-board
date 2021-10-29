@@ -1,0 +1,13 @@
+table:
+  name: repos
+  schema: public
+object_relationships:
+- name: org
+  using:
+    manual_configuration:
+      column_mapping:
+        organization: name
+      insertion_order: null
+      remote_table:
+        name: organizations
+        schema: public

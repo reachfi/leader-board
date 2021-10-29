@@ -1,0 +1,3 @@
+table:
+  name: weekly_teams_prs_type_stats
+  schema: public

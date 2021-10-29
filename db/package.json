@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "docker-compose up -d"
+  },
+  "packageManager": "yarn@3.1.0"
+}

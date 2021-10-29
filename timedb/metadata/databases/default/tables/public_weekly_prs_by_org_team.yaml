@@ -1,3 +1,0 @@
-table:
-  name: weekly_prs_by_org_team
-  schema: public

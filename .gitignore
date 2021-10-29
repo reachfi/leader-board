@@ -1,6 +1,6 @@
 NODE_MODULES
 .parcel-cache
-dist
+etl/dist
 .yarn/*
 !.yarn/cache
 !.yarn/patches
