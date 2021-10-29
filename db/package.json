@@ -1,4 +1,5 @@
 {
+  "name": "db",
   "scripts": {
     "start": "docker-compose up -d"
   },
