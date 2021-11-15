@@ -1,0 +1,3 @@
+table:
+  name: weekly_prs_stats
+  schema: public
